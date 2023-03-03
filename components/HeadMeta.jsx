@@ -4,7 +4,7 @@ export default function HeadMeta({ title, description }) {
   return (
     <div>
       <Head>
-        <title>{title ? title : "Drive"}</title>
+        <title>{title ? title : "Drive Home"}</title>
         <meta
           name="description"
           content={
