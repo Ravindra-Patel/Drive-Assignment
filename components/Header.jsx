@@ -15,6 +15,7 @@ const Header = () => {
               alt="/drive_logo.jpg"
               width="100"
               height="100"
+              priority
             />
           </div>
           <div class="space-x-2 mr-2 md:space-x-6 text-white flex md:mr-10">
@@ -28,7 +29,7 @@ const Header = () => {
               </Link>
             )}
             {router.pathname === "/cars-for-sale" ? (
-              <Link href="/top-sources" class="text-blue-200">
+              <Link href="/cars-for-sale" class="text-blue-200">
                 Cars for Sale
               </Link>
             ) : (
