@@ -27,12 +27,12 @@ const Header = () => {
                 Home
               </Link>
             )}
-            {router.pathname === "/top-sources" ? (
+            {router.pathname === "/cars-for-sale" ? (
               <Link href="/top-sources" class="text-blue-200">
                 Cars for Sale
               </Link>
             ) : (
-              <Link href="/top-sources" class="hover:text-blue-200">
+              <Link href="/cars-for-sale" class="hover:text-blue-200">
                 Cars for Sale
               </Link>
             )}
