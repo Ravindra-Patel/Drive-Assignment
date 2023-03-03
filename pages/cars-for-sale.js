@@ -1,14 +1,21 @@
 import HeadMeta from "../components/HeadMeta";
 import { gql } from "@apollo/client";
 import client from "../apollo/apollo-client";
+import Car from "../components/Car";
 
 const CarsForSale = ({ cars }) => {
   console.log(cars);
   return (
     <>
       <HeadMeta title="Cars For Sale" />
-      <div class="min-h-[77vh] flex item-center justify-center space-x-5">
-        <div>Cars For Sale</div>
+      <div class="min-h-[77vh] flex item-center justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+          {cars.map((car) => (
+            <div key={car.id} class="m-auto md:m-2 w-full">
+              <Car car={car} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
