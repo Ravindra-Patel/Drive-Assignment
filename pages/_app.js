@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <HeadMeta />
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps}/>
       <Footer />
     </div>
   );
