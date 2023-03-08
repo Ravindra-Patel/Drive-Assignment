@@ -6,8 +6,8 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <>
-      <nav class="sticky top-0 w-full bg-darkBlue">
+    < >
+      <nav class="sticky top-0 w-full bg-darkBlue min-w-[400px]">
         <div class="flex items-center justify-between w-full">
           <div>
             <Image
