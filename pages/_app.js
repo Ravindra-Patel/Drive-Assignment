@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <HeadMeta />
-      <Header/>
-      <Component {...pageProps}/>
+      <Header />
+      <Component {...pageProps} />
       <Footer />
     </div>
   );
