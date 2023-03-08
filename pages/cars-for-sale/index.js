@@ -4,13 +4,14 @@ import Car from "../../components/Car";
 import HeadMeta from "../../components/HeadMeta";
 
 const CarsForSale = ({ cars }) => {
+    
   return (
     <>
       <HeadMeta title="Cars For Sale" />
-      <div class="min-h-[77vh] flex item-center justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="min-h-[77vh] flex item-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {cars.map((car) => (
-            <div key={car.id} class="m-auto md:m-2 w-full">
+            <div key={car.id} className="m-auto md:m-2 w-full">
               <Car car={car} />
             </div>
           ))}

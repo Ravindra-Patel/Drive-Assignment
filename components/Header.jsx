@@ -7,8 +7,8 @@ const Header = () => {
 
   return (
     < >
-      <nav class="sticky top-0 w-full bg-darkBlue min-w-[400px]">
-        <div class="flex items-center justify-between w-full">
+      <nav className="sticky top-0 w-full bg-darkBlue min-w-[400px]">
+        <div className="flex items-center justify-between w-full">
           <div>
             <Image
               src="/drive_logo.jpg"
@@ -18,22 +18,22 @@ const Header = () => {
               priority
             />
           </div>
-          <div class="space-x-2 mr-2 md:space-x-6 text-white flex md:mr-10">
+          <div className="space-x-2 mr-2 md:space-x-6 text-white flex md:mr-10">
             {router.pathname === "/" ? (
-              <Link href="/" class="text-blue-200">
+              <Link href="/" className="text-blue-200">
                 Home
               </Link>
             ) : (
-              <Link href="/" class="hover:text-blue-200">
+              <Link href="/" className="hover:text-blue-200">
                 Home
               </Link>
             )}
             {router.pathname === "/cars-for-sale" ? (
-              <Link href="/cars-for-sale" class="text-blue-200">
+              <Link href="/cars-for-sale" className="text-blue-200">
                 Cars for Sale
               </Link>
             ) : (
-              <Link href="/cars-for-sale" class="hover:text-blue-200">
+              <Link href="/cars-for-sale" className="hover:text-blue-200">
                 Cars for Sale
               </Link>
             )}
