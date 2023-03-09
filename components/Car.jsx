@@ -23,7 +23,7 @@ const Car = ({ car }) => {
                 height: "100%",
                 width: "100%",
                 objectFit: "cover",
-                zIndex: -1,
+                zIndex: -3,
               }}
             />
           ) : (
