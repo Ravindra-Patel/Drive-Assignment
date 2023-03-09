@@ -6,8 +6,11 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    < >
-      <nav className="sticky top-0 w-full bg-darkBlue min-w-[400px]" style={{zIndex:100}}>
+    <>
+      <nav
+        className="sticky top-0 w-full bg-darkBlue min-w-[400px]"
+        style={{ zIndex: 100 }}
+      >
         <div className="flex items-center justify-between w-full">
           <div>
             <Image
