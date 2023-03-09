@@ -30,12 +30,12 @@ const CarCarousel = ({ carImages }) => {
               <BiChevronLeft
                 onClick={decrease}
                 size="60px"
-                style={{ color: "white", cursor: "pointer", zIndex: -1 }}
+                style={{ color: "white", cursor: "pointer"}}
               />
             ) : (
               <BiChevronLeft
                 size="60px"
-                style={{ color: "#d4d4d4", opacity: "0.2", zIndex: -1 }}
+                style={{ color: "#d4d4d4", opacity: "0.2"}}
               />
             )}
           </div>
@@ -45,12 +45,12 @@ const CarCarousel = ({ carImages }) => {
               <BiChevronRight
                 onClick={increase}
                 size="60px"
-                style={{ color: "white", cursor: "pointer", zIndex: -1 }}
+                style={{ color: "white", cursor: "pointer"}}
               />
             ) : (
               <BiChevronRight
                 size="60px"
-                style={{ color: "#d4d4d4", opacity: "0.2", zIndex: -1 }}
+                style={{ color: "#d4d4d4", opacity: "0.2" }}
               />
             )}
           </div>
@@ -67,7 +67,7 @@ const CarCarousel = ({ carImages }) => {
               width: "100%",
               objectFit: "cover",
               //   objectPosition:"bottom",
-              zIndex: -3,
+              zIndex: -1,
             }}
           />
         </div>
