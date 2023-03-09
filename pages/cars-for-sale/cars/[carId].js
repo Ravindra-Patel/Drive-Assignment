@@ -2,11 +2,31 @@ import React from "react";
 import Image from "next/image";
 import client from "../../../apollo/apollo-client";
 import { gql } from "@apollo/client";
+import CarCarousel from "../../../components/CarCarousel";
+import BasicSpecs from "../../../components/BasicSpecs";
+import PerformanceEngine from "../../../components/PerformanceEngine";
+import Transmission from "../../../components/Transmission";
+import Dimension from "../../../components/Dimension";
 
 const SingleCarPage = ({ car }) => {
   return (
-    <div>
-      <h1>{car.RedbookVehicle.RedbookMake.make}</h1>
+    <div className="w-full min-h-[77vh] grid justify-center">
+      {car && (
+        <div>
+          <CarCarousel carImages={car.DealerListingImages}></CarCarousel>
+          <BasicSpecs car={car.RedbookVehicle} />
+          <PerformanceEngine car={car.RedbookVehicle} />
+          <Transmission car={car.RedbookVehicle}/>
+          <Dimension car={car.RedbookVehicle}/>
+        </div>
+      )}
+      {!car && (
+        <div className="w-full flex items-center justify-center">
+          <h1 className="text-3xl font-bold">
+            No Data Available!
+          </h1>
+        </div>
+      )}
     </div>
   );
 };
@@ -27,14 +47,13 @@ export async function getStaticPaths() {
   });
 
   const paths = data.DealerListings.results.map((car) => ({
-    params: { carId: car.id.toString() },
+    params: { carId: car.id.toString() }, //imp to convert the car id to string
   }));
 
   return { paths, fallback: true };
 }
 
 export async function getStaticProps(context) {
-  console.log(context);
   const { data } = await client.query({
     query: gql`
         {
@@ -111,8 +130,6 @@ export async function getStaticProps(context) {
         }
       `,
   });
-
-  console.log(data);
 
   return {
     props: {
