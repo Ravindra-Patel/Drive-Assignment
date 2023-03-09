@@ -46,7 +46,7 @@ export async function getStaticPaths() {
     `,
   });
 
-  const paths = data.DealerListings.results.map((car) => ({
+  const paths = data.DealerListings.results.slice(0,20).map((car) => ({
     params: { carId: car.id.toString() }, //imp to convert the car id to string
   }));
 
