@@ -23,7 +23,7 @@ const CarCarousel = ({ carImages }) => {
   return (
     <>
       <div className="min-w-[300px] w-[90vw] h-[50vh] mt-6 relative lg:w-[60vw] lg:h-[60vh]">
-        <div className="flex w-full h-full justify-between pl-5 pr-5">
+        <div className="flex w-full h-full justify-between">
           {/* Left Button */}
           <div className="flex items-center h-full">
             {imageNumber > 0 ? (
