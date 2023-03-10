@@ -11,20 +11,18 @@ import Dimension from "../../../components/Dimension";
 const SingleCarPage = ({ car }) => {
   return (
     <div className="w-full min-h-[77vh] grid justify-center">
-      {car && (
-        <div>
-          <CarCarousel carImages={car.DealerListingImages}></CarCarousel>
-          <BasicSpecs car={car.RedbookVehicle} />
-          <PerformanceEngine car={car.RedbookVehicle} />
-          <Transmission car={car.RedbookVehicle}/>
-          <Dimension car={car.RedbookVehicle}/>
-        </div>
-      )}
       {!car && (
         <div className="w-full flex items-center justify-center">
-          <h1 className="text-3xl font-bold">
-            No Data Available!
-          </h1>
+          <h1 className="text-3xl font-bold">No Data Available!</h1>
+        </div>
+      )}
+      {car && (
+        <div>
+          <CarCarousel carImages={car?.DealerListingImages}></CarCarousel>
+          <BasicSpecs car={car?.RedbookVehicle} />
+          <PerformanceEngine car={car?.RedbookVehicle} />
+          <Transmission car={car?.RedbookVehicle} />
+          <Dimension car={car?.RedbookVehicle} />
         </div>
       )}
     </div>
@@ -46,7 +44,7 @@ export async function getStaticPaths() {
     `,
   });
 
-  const paths = data.DealerListings.results.slice(0,20).map((car) => ({
+  const paths = data.DealerListings.results.slice(0, 20).map((car) => ({
     params: { carId: car.id.toString() }, //imp to convert the car id to string
   }));
 
