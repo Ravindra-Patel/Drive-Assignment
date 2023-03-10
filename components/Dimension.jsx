@@ -10,7 +10,7 @@ const Dimension = ({ car }) => {
   };
 
   return (
-    <div className="w-[90vw] mt-6 lg:w-[60vw] pt-2 border-t-4 ">
+    <div className="min-w-[300px] w-[90vw] mt-6 lg:w-[60vw] pt-2 border-t-4 ">
       <div className="flex justify-between w-full h-[10vh]">
         <h1 className="text-2xl font-bold">Dimensions</h1>
         {showData ? (

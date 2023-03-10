@@ -10,7 +10,7 @@ const Car = ({ car }) => {
     router.push(`/cars-for-sale/cars/${car.id}`);
   };
   return (
-    <div className=" mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] shadow container">
+    <div className="min-w-[300px] mx-2 mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] shadow container">
       {/* Image of the Car */}
       <Link href={`/cars-for-sale/cars/${car.id}`}>
         <div className="w-full h-[50%] relative">
@@ -43,7 +43,7 @@ const Car = ({ car }) => {
       </Link>
 
       {/* Name and Price Section */}
-      <div className="w-full h-[15%]  flex justify-between pt-4">
+      <div className="w-full h-[18%]  flex justify-between pt-4">
         <div className="text-2xl font-bold mr-2 pl-4">
           <Link href={`/cars-for-sale/cars/${car.id}`}>
             <h1>
@@ -88,11 +88,11 @@ const Car = ({ car }) => {
 
       {/* Buttons Div */}
       <div className="w-full h-[15%] flex items-center justify-between">
-        <button className="bg-blue-500 w-[40%] ml-5 sm:text-sm sm:py-0 h-10 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded">
+        <button className="bg-blue-500 w-[40%] ml-5 text-sm md:text-lg sm:py-0 h-10 hover:bg-blue-700 text-white font-bold md:px-1 md:py-1 rounded">
           Enquire Now
         </button>
         <button
-          className="bg-white w-[40%] mr-5 sm:text-sm sm:py-0 h-10 hover:bg-blue-700 hover:text-white text-blue-500 font-bold px-4 py-2 rounded border-2 border-blue-500"
+          className="bg-white w-[40%] mr-5 text-sm md:text-lg sm:py-0 h-10 hover:bg-blue-700 hover:text-white text-blue-500 font-bold md:px-1 md:py-1 rounded border-2 border-blue-500"
           onClick={toSingleCar}
         >
           View Details

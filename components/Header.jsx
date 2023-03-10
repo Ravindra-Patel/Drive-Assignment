@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className="sticky top-0 w-full bg-darkBlue min-w-[400px]"
+        className="sticky top-0 w-full bg-darkBlue min-w-[320px]"
         style={{ zIndex: 100 }}
       >
         <div className="flex items-center justify-between w-full">
