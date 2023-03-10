@@ -59,7 +59,7 @@ const CarCarousel = ({ carImages }) => {
         {/* Images for Carousels */}
         <div>
           <Image
-            src={carImages[imageNumber].image_location}
+            src={carImages[imageNumber]?.image_location}
             alt="/drive_logo.jpg"
             fill
             style={{
