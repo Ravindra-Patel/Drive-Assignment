@@ -10,7 +10,7 @@ const Car = ({ car }) => {
     router.push(`/cars-for-sale/cars/${car.id}`);
   };
   return (
-    <div className="min-w-[300px] mx-auto mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] lg:h-[67vh] xl:w-[23vw] xl:h-[50vh] shadow container">
+    <div className="min-w-[300px] min-h-[440px] max-h-[450px] mx-auto mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] lg:h-[67vh] xl:w-[23vw] xl:h-[50vh] shadow container">
       {/* Image of the Car */}
       <Link href={`/cars-for-sale/cars/${car.id}`}>
         <div className="w-full h-[50%] relative">
