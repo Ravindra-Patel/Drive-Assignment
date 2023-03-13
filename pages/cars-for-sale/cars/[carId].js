@@ -8,6 +8,7 @@ import PerformanceEngine from "../../../components/PerformanceEngine";
 import Transmission from "../../../components/Transmission";
 import Dimension from "../../../components/Dimension";
 import { GET_CAR_IDS } from "../../../queries/getCarIds";
+import { GET_SINGLE_CAR } from "../../../queries/getSingleCar";
 
 const SingleCarPage = ({ car }) => {
   return (
@@ -45,11 +46,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-
   // const { data } = await client.query({
-  //   query: GET_CAR_IDS,
+  //   query: GET_SINGLE_CAR,
   //   variables: { id: context.params.carId },
   // });
+
+  // console.log(context.params.carId);
+  // console.log(data);
+
   const { data } = await client.query({
     query: gql`
         {
@@ -82,7 +86,7 @@ export async function getStaticProps(context) {
               limitedEdition: vehicle_limited_edition
               buildCountryOriginDescription: vehicle_build_country_origin_description
               seriesPublic: vehicle_series_public
-        
+
               #Engine & Performace Section
               engineDescription: vehicle_engine_description
               inductionDescription: vehicle_induction_description
@@ -97,13 +101,13 @@ export async function getStaticProps(context) {
               altEngTorque: vehicle_alt_eng_torque
               engineLocation: vehicle_engine_location
               torqueRpmFrom: vehicle_torque_rpmfrom
-        
+
               # Transmission
               driveCode: vehicle_drive_code
               gearNum: vehicle_gear_num
               gearTypeDescription: vehicle_gear_type_description
               gearLocationDescription: vehicle_gear_location_description
-        
+
               # Dimenssions
               manufacturerWheelBaseConfig: vehicle_manufacturer_wheel_base_config
               wheelBaseConfig: vehicle_wheel_base_config
@@ -122,7 +126,7 @@ export async function getStaticProps(context) {
               grossCombinationMass: vehicle_gross_combination_mass
             }
           }
-        
+
         }
       `,
   });
