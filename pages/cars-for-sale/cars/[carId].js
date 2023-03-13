@@ -7,6 +7,7 @@ import BasicSpecs from "../../../components/BasicSpecs";
 import PerformanceEngine from "../../../components/PerformanceEngine";
 import Transmission from "../../../components/Transmission";
 import Dimension from "../../../components/Dimension";
+import { GET_CAR_IDS } from "../../../queries/getCarIds";
 
 const SingleCarPage = ({ car }) => {
   return (
@@ -33,15 +34,7 @@ export default SingleCarPage;
 
 export async function getStaticPaths() {
   const { data } = await client.query({
-    query: gql`
-      {
-        DealerListings {
-          results {
-            id
-          }
-        }
-      }
-    `,
+    query: GET_CAR_IDS,
   });
 
   const paths = data.DealerListings.results.slice(0, 20).map((car) => ({
@@ -52,6 +45,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+
+  // const { data } = await client.query({
+  //   query: GET_CAR_IDS,
+  //   variables: { id: context.params.carId },
+  // });
   const { data } = await client.query({
     query: gql`
         {

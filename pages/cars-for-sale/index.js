@@ -2,6 +2,7 @@ import { gql } from "@apollo/client";
 import client from "../../apollo/apollo-client";
 import Car from "../../components/Car";
 import HeadMeta from "../../components/HeadMeta";
+import { GET_CARS } from "../../queries/getAllCars";
 
 const CarsForSale = ({ cars }) => {
   const loadMore = () => {};
@@ -34,33 +35,7 @@ export default CarsForSale;
 
 export async function getStaticProps() {
   const { data } = await client.query({
-    query: gql`
-      {
-        DealerListings {
-          results {
-            id
-            colour
-            vehicleKey: vehicle_key
-            listType: list_type
-            year
-            price: price_excluding_government_charges
-            kms: odometer
-            variant
-            fuelType: fuel_type
-            transmission
-            engineSize: engine_size
-            seat_capacity
-            image: main_image
-            state: location_state
-            makeName: make
-            modelName: model
-            region: Region {
-              regionName: region_name
-            }
-          }
-        }
-      }
-    `,
+    query: GET_CARS,
   });
 
   return {
