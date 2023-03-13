@@ -10,7 +10,7 @@ const Car = ({ car }) => {
     router.push(`/cars-for-sale/cars/${car.id}`);
   };
   return (
-    <div className="min-w-[300px] mx-2 mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] shadow container">
+    <div className="min-w-[300px] mx-auto mt-5 w-[90vw] h-[75vh] md:h-[75vh] md:w-[45vw] lg:w-[30vw] lg:h-[67vh] xl:w-[23vw] xl:h-[50vh] shadow container">
       {/* Image of the Car */}
       <Link href={`/cars-for-sale/cars/${car.id}`}>
         <div className="w-full h-[50%] relative">
@@ -43,7 +43,7 @@ const Car = ({ car }) => {
       </Link>
 
       {/* Name and Price Section */}
-      <div className="w-full h-[18%]  flex justify-between pt-4">
+      <div className="w-full h-[17%]  flex justify-between pt-4">
         <div className="text-2xl font-bold mr-2 pl-4">
           <Link href={`/cars-for-sale/cars/${car.id}`}>
             <h1>
@@ -57,7 +57,7 @@ const Car = ({ car }) => {
       </div>
 
       {/* Information Section */}
-      <div className="w-full h-[18%] pb-2">
+      <div className="w-full h-[19%] pb-2">
         {/* First Row */}
         <div className="w-full flex mt-3">
           <div className="w-[40%] pl-10">
@@ -87,7 +87,7 @@ const Car = ({ car }) => {
       </div>
 
       {/* Buttons Div */}
-      <div className="w-full h-[15%] flex items-center justify-between">
+      <div className="w-full flex items-center justify-between">
         <button className="bg-blue-500 w-[40%] ml-5 text-sm md:text-lg sm:py-0 h-10 hover:bg-blue-700 text-white font-bold md:px-1 md:py-1 rounded">
           Enquire Now
         </button>
