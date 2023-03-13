@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const GET_SINGLE_CAR = gql`
 {
-  DealerListing(id:ID) {
+  DealerListing(id:$id) {
     id
     DealerListingImages {
       image_location
