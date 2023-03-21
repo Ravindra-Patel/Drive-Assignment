@@ -18,7 +18,7 @@ const BasicSpecs = ({ car }) => {
   return (
     <>
       {/* Desktop View */}
-      <div className="hidden md:flex flex-col w-[90vw] h-[20vh] mt-6 lg:w-[60vw] lg:h-[18vh] pl-4 bg-veryLightGray">
+      <div className="hidden md:flex flex-col w-[90vw] h-[20vh] xl:h-[13vh] mt-6 lg:w-[60vw] lg:h-[18vh] pl-4 bg-veryLightGray">
         {/* Row 1 */}
         <div className="flex  md:w-[100%] justify-between pt-4">
           {/* Item 1 */}
