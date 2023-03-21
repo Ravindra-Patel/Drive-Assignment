@@ -4,8 +4,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const CarCarousel = ({ carImages }) => {
   const totalImages = carImages.length;
-  console.log(totalImages);
-
+  
   const [imageNumber, setImageNumber] = useState(0);
 
   const decrease = () => {
