@@ -12,7 +12,7 @@ import { GET_SINGLE_CAR } from "../../../queries/getSingleCar";
 
 const SingleCarPage = ({ car }) => {
   return (
-    <div className="w-full min-h-[77vh] grid justify-center">
+    <div className="w-full min-h-[82vh] grid justify-center">
       {!car && (
         <div className="w-full flex items-center justify-center">
           <h1 className="text-3xl font-bold">No Data Available!</h1>
