@@ -14,7 +14,7 @@ import {
 } from "react-icons/bs";
 
 const BasicSpecs = ({ car }) => {
-  console.log(car);
+  
   return (
     <>
       {/* Desktop View */}

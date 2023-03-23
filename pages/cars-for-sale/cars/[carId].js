@@ -38,6 +38,9 @@ export async function getStaticPaths() {
     query: GET_CAR_IDS,
   });
 
+  // Restrict the number of pages in getStaticPaths to a limited number, to avoid build fail.
+  // Because if the npm run build fails then we will not be able to deploy the project
+
   const paths = data.DealerListings.results.slice(0, 20).map((car) => ({
     params: { carId: car.id.toString() }, //imp to convert the car id to string
   }));
@@ -50,9 +53,6 @@ export async function getStaticProps(context) {
   //   query: GET_SINGLE_CAR,
   //   variables: { id: context.params.carId },
   // });
-
-  // console.log(context.params.carId);
-  // console.log(data);
 
   const { data } = await client.query({
     query: gql`
